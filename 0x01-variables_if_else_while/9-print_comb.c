@@ -6,19 +6,15 @@
 */
 int main(void)
 {
-	int i, d;
+	int i;
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		for (d = '0'; d <= '9'; d++)
+		putchar(i);
+		if (i < '9')
 		{
-			putchar(i);
-			putchar(d);
-			if (i < '9' || d < '9')
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
