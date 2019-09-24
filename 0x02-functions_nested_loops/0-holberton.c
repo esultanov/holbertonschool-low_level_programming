@@ -2,15 +2,20 @@
 
 /**
  * main - main function.
- * print_alphebet - 10 times alphabet.
+ * _putchar - 10 times alphabet.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	char c;
+	char c[] = "Holberton";
+	int i = 0;
 
-	print_alphabet();
-	_putchar(c);
+	while (c[i] != '\0')
+	{
+		_putchar(c[i]);
+		i++;
+	}
+	_putchar('\n');
 	return (0);
 }
