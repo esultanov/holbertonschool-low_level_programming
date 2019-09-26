@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * times_table - prints times table.
+ * print_times_table - prints times table.
  * @n: character input.
  * Return: Always 0.
  */
