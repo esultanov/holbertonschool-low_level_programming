@@ -11,26 +11,22 @@ void print_times_table(int n)
 
 	if (n <= 15 && n >= 0)
 	{
-
 		for (h = 0; h <= n; h++)
 		{
 			for (v = 0; v <= n; v++)
 			{
 				z = h * v;
-				if (z > 9)
+				if (z > 99)
 				{
-					if (z > 99)
-					{
-						_putchar((z / 100) + 48);
-						_putchar(((z % 100) / 10) + 48);
-						_putchar((z % 10) + 48);
-					}
-					else
-					{
-						_putchar(' ');
-						_putchar((z / 10) + 48);
-						_putchar((z % 10) + 48);
-					}
+					_putchar((z / 100) + 48);
+					_putchar(((z % 100) / 10) + 48);
+					_putchar((z % 10) + 48);
+				}
+				else if ((z > 9) && (z < 100))
+				{
+					_putchar(' ');
+					_putchar((z / 10) + 48);
+					_putchar((z % 10) + 48);
 				}
 				else if (v != 0)
 				{
@@ -47,7 +43,6 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 				}
-
 			}
 			_putchar('\n');
 		}
