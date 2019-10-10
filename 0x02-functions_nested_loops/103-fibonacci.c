@@ -5,23 +5,22 @@
  */
 int main(void)
 {
+	long d = 0;
 	long f = 0;
 	long i = 1;
 	int c;
 
-	for (c = 1; c <= 32; c++)
+	for (c = 1; c <= 31; c++)
 	{
 		i = i + f;
 		f = i - f;
 		if (i % 2 != 0)
 		{
-			printf("%ld", i);
-			{
-				if (c < 31)
-					printf(", ");
-			}
+			d = d + i;
 		}
+
 	}
+	printf("%ld", d);
 	putchar('\n');
 	return (0);
 }
