@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	long d = 0;
+	long d = 1;
 	long f = 0;
 	long i = 1;
 	int c;
