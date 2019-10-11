@@ -61,7 +61,7 @@ void print_number(int n)
 	}
 	if (n < 10 && n >= 0)
 	{
-		m = 10;
+		m = 1;
 		c = 1;
 	}
 	for (l = 0; l < c; l++)
