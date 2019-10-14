@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		{
 			n = strtol(argv[i], &p, 10);
 			if (!*p)
-				total += n;
+				t += n;
 			else
 			{
 				printf("Error\n");
