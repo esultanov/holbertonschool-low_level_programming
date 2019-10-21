@@ -1,22 +1,22 @@
 #include "holberton.h"
 /**
  * rot13 - encoder.
- * @str: string.
+ * @s: string.
  * Return: always 0.
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
 	int a;
-	char letters[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char digits[] = "nopqrstuvwxyzabcdefghijklm";
+	char letters[27] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char digits[27] = "nopqrstuvwxyzabcdefghijklm";
 
-	for (a = 0; str[a] != '\0'; a++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if ((str[a] > 64 && str[a] < 91) || (str[a] > 96 && str[a] < 123))
+		if ((s[a] > 64 && s[a] < 91) || (s[a] > 96 && s[a] <  123))
 		{
-			str[a] = (str[a] - 65 > 25) ?
-				digits[str[a] - 97] : letters[str[a] - 65];
+			s[a] = (s[a] - 65 > 25) ?
+				digits[s[a] - 97] : letters[s[a] - 65];
 		}
 	}
-	return (str);
+	return (s);
 }
