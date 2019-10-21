@@ -6,17 +6,22 @@
  */
 char *rot13(char *s)
 {
-	int a;
-	char letters[27] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char digits[27] = "nopqrstuvwxyzabcdefghijklm";
+	int a = 0, b;
+	char let[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char dig[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (a = 0; s[a] != '\0'; a++)
+	while (s[a] != '\0')
 	{
-		if ((s[a] > 64 && s[a] < 91) || (s[a] > 96 && s[a] <  123))
+		for (b = 0; b < 52;)
 		{
-			s[a] = (s[a] - 65 > 25) ?
-				digits[s[a] - 97] : letters[s[a] - 65];
+			if (s[a] == let[b])
+			{
+				s[a] = dig[b];
+				break;
+			}
+			b++;
 		}
+		a++;
 	}
 	return (s);
 }
