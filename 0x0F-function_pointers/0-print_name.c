@@ -3,10 +3,9 @@
  * print_name - print name.
  * @name: is name.
  * @f: function pointer.
- * @s: string with name.
  * Return: void.
  */
-void print_name(char *name, void (*f)(char *s))
+void print_name(char *name, void (*f)(char *))
 {
 	f(name);
 }
