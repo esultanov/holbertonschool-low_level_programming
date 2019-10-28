@@ -11,6 +11,11 @@ void _printstr(va_list list);
 void _printfloat(va_list list);
 void _printint(va_list list);
 
+/**
+ * struct checker - strucktur for checker.
+ * @type: points to type.
+ * @f: pointer.
+ */
 typedef struct checker
 {
 	char *type;
