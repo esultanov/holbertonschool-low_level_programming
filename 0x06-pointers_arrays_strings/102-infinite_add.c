@@ -37,6 +37,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		rem = (d + f + rem) / 10;
 	}
 	if (size_r < 0 && ((a >= 0 || b >= 0) || rem != 0))
-	    return (0);
+		return (0);
 	return (&r[++size_r]);
 }
