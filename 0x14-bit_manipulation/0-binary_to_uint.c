@@ -17,7 +17,6 @@ unsigned int binary_to_uint(const char *b)
 		if (*b != 49 && *b != 48)
 			return (0);
 		dec = 2 * dec + (*b - 48);
-		b++;
 	}
 	return (dec);
 }
