@@ -8,7 +8,7 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index > 18446744073709551614) /* ulong int value */
+	if (index > 63) /* ulong int value */
 		return (-1);
 	n = n >> index;
 	return (n & 1);
