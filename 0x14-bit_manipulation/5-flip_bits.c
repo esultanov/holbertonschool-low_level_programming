@@ -12,8 +12,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int ui;
 	int count = 0; /* return this value */
 
-	if (index > 64)
-		return (-1);
 	ui = n ^ m;
 	while (ui)
 	{
