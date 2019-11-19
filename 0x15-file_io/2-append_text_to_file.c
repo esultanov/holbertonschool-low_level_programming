@@ -18,7 +18,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	fd = open(filename, O_APPEND | O_WRONLY);
 	if (fd == -1)
 		return (-1);
-	for (count = 0; text_content != '\0'; count++)
+	for (count = 0; text_content[count] != '\0'; count++)
 		;
 	st = write(fd, text_content, count);
 	if (st == -1)
