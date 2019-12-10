@@ -28,5 +28,5 @@ int is_prime_number(int n)
 	if (n <= 1)
 		return (0);
 	else
-		return (check_prime(n, div));
+		return (prime_helper(n, div));
 }
