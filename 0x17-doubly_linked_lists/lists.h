@@ -2,6 +2,7 @@
 #define LISTS_H
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -11,6 +12,7 @@
  * Description: doubly linked list node structure
  * for Holberton project
  */
+
 typedef struct dlistint_s
 {
     int n;
