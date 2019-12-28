@@ -5,16 +5,17 @@
  * @str: string value of node.
  * Return: the address of the new element, or NULL if it failed.
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *tmp;
+	list_t *new;
+	list_t *tmp;
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
-		;
 	tmp = *head;
 	while (tmp && tmp->next != NULL)
 		tmp = tmp->next;
+	for (i = 0; str[i] != '\0'; i++)
+		;
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 	{
@@ -33,5 +34,5 @@ list_t *add_node(list_t **head, const char *str)
 		tmp->next = new;
 	else
 		*head = new;
-	return (*new);
+	return (new);
 }
