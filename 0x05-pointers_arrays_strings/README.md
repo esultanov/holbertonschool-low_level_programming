@@ -1,6 +1,6 @@
 [Holberton School of software engineering](https://www.holbertonschool.com)
 
-## Week 3 - C - Pointers, arrays and strings
+## Week 3 - C - More pointers, arrays and strings
 
 ### In this project learning objectives are:
 
