@@ -11,11 +11,14 @@
 char *_strdup(char *str)
 {
 	char *arey;
-	unsigned int i;
+	int i, n;
 
-	if (!str)
+	if (str == NULL)
 		return (NULL);
-	arey = malloc(sizeof(*str));
+	for (n = 0; str[n] != '\0'; n++)
+		;
+	n++;
+	arey = malloc(n * sizeof(char));
 	if (arey)
 	{
 		for (i = 0; str[i] != '\0'; i++)
@@ -23,5 +26,6 @@ char *_strdup(char *str)
 	}
 	else
 		return (NULL);
+	arey[i + 1] = '\0';
 	return (arey);
 }
