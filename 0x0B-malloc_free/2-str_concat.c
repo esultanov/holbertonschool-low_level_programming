@@ -13,8 +13,8 @@ char *str_concat(char *s1, char *s2)
 	char *arey;
 	int i, n, t, m, o;
 
-//	if (s1 == NULL && s2 == NULL)
-//		return (NULL);
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 	for (n = 0; s1[n] != '\0'; n++)
 		;
 	for (i = 0; s2[i] != '\0'; i++)
