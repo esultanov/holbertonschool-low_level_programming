@@ -11,17 +11,18 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *arey;
-	int i, n, t, m, o;
+	int i, n, m, o;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	for (n = 0; s1[n] != '\0'; n++)
 		;
 	for (i = 0; s2[i] != '\0'; i++)
 		;
 	i++;
-	t = i + n;
-	arey = malloc(t * sizeof(char));
+	arey = malloc(i + n);
 	if (arey)
 	{
 		for (m = 0; m < n; m++)
